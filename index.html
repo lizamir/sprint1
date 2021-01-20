@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <link rel="stylesheet" href="css/app.css" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mine Sweeper</title>
@@ -9,10 +10,8 @@
 
 <body onload="initGame()">
     <h1>Mine Sweeper</h1>
-    <div class="msg">
-
-    </div>
-    <h2>timer: <span>00:00:000</span></h2>
+    <div class="msg"></div>
+    <div class="clock">0:0:000 </div>
 
     <table border="1" cellpadding="20">
         <tbody class="board">
@@ -20,9 +19,10 @@
         </tbody>
     </table>
 
-    <!-- <button onclick="restart()">Play again</button> -->
+    <button onclick="restart()">Play again</button>
 
     <script src="js/utils.js"></script>
+    <script src="js/timer.js"></script>
     <script src="js/game.js"></script>
 
 </body>
