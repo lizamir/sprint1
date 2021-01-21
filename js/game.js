@@ -175,38 +175,38 @@ function cellClicked(i, j, elCell) {
     var location = { i, j };
     var curCell = gBoard[i][j];
     if (curCell.isShown) return
-        //start without mine
 
-    if (!gGame.shownCount && curCell.isMine) {
-        elCell.innerHTML = EMPTY;
-        initGame()
-    }
-
-    curCell.isShown = true;
-    gGame.shownCount++;
-    if (curCell.isMine) {
-        if (!gLevel.life) gameOver();
-        gLevel.life--;
-        gGame.shownCount--;
-        renderCell(location, MINE)
-        curCell.isShown = false;
-        setTimeout(() => {
-            elCell.innerHTML = EMPTY;
-        }, 1000);
-
-
-    } else if (curCell.minesAroundCount > 0 && !curCell.isMine) {
-        var value = curCell.minesAroundCount;
-        //elCell.classList.add('clicked')
-        console.log(value, 'value');
-        //expandShown(gBoard, i, j)
-        renderCell(location, value)
+    if (gIsFirstClicked && curCell.isMine) {
+        renderCell(location, EMPTY)
+        gIsFirstClicked = false;
+        restart()
     } else {
-        expandShown(gBoard, i, j)
+        gIsFirstClicked = false
+        curCell.isShown = true;
+        gGame.shownCount++;
+        if (curCell.isMine) {
+            if (!gLevel.life) gameOver();
+            gLevel.life--;
+            gGame.shownCount--;
+            renderCell(location, MINE)
+            curCell.isShown = false;
+            setTimeout(() => {
+                elCell.innerHTML = EMPTY;
+            }, 1000);
+
+
+        } else if (curCell.minesAroundCount > 0 && !curCell.isMine) {
+            var value = curCell.minesAroundCount;
+            //elCell.classList.add('clicked')
+            console.log(value, 'value');
+            //expandShown(gBoard, i, j)
+            renderCell(location, value)
+        } else {
+            expandShown(gBoard, i, j)
+        }
     }
     console.log(' gGame.shownCount', gGame.shownCount);
     isVictory()
-
 
 }
 

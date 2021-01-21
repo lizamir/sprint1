@@ -15,6 +15,6 @@ function timerOn() {
 
 
 function renderTime(startTime) {
-    var elapsedTime = Date.now() - startTime;
-    document.querySelector('.timer span').innerText = (elapsedTime / 1000).toFixed(0);
+    var time = Date.now() - startTime;
+    document.querySelector('.timer span').innerText = (time / 1000).toFixed(0);
 }

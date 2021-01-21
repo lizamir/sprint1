@@ -38,17 +38,22 @@ h1 {
     padding: 15px 24px;
     text-decoration: none;
     text-shadow: 0px 4px 0px #b55df0;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .start span {
-    font-size: 40px;
+    font-size: 50px;
+    /* background-color: #c28dc7; */
+    background: linear-gradient(178deg, rgba(254, 195, 242, 0.17690826330532217) 3%, rgba(238, 125, 215, 0.496) 15%, rgb(233, 172, 241) 33%);
 }
 
 .start {
     border: none;
     display: inline-block;
     margin-bottom: 10px;
+    margin-top: 10px;
+    background: linear-gradient(178deg, rgba(254, 195, 242, 0.17690826330532217) 3%, rgba(247, 149, 227, 0.4962359943977591) 15%, rgb(236, 152, 247) 33%);
+    /* background-color: #c28dc7; */
 }
 
 .start:hover {
@@ -58,28 +63,31 @@ h1 {
 
 table {
     margin: auto;
-    height: 120px;
-    width: 120px;
+    height: 250px;
+    width: 250px;
     table-layout: fixed;
     border: 1px solid rgb(255, 165, 240);
+    margin-bottom: 110px;
 }
 
 .cell {
     background-color: rgba(211, 211, 211, 0.699);
     border: 3px outset rgba(247, 172, 243, 0.753);
-    height: 45px;
-    width: 45px;
+    height: 20px;
+    width: 20px;
     text-align: center;
     cursor: pointer;
+    table-layout: fixed;
 }
 
 .clicked {
     background-color: rgba(211, 211, 211, 0.699);
     border: 3px outset rgba(247, 172, 243, 0.753);
-    height: 30px;
-    width: 30px;
+    height: 20px;
+    width: 20px;
     text-align: center;
     cursor: pointer;
+    table-layout: fixed;
 }
 
 .cell:hover {
@@ -94,11 +102,20 @@ table {
     font-weight: bold;
     width: 10%;
     min-width: 50px;
-    padding: 2px;
-    padding: 10px;
+    padding: 5px;
     margin: auto;
+    margin-left: 15px;
 }
 
 .live {
     font-size: 40px;
+    margin: auto;
+    margin-right: 40px;
+}
+
+.samerow {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
