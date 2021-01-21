@@ -44,7 +44,7 @@ function initGame() {
     gIsFirstClicked = true;
     gBoard = buildBoard(gLevel.size)
     renderBoard(gBoard)
-    startTimer()
+    timerOn()
 }
 
 
@@ -64,18 +64,8 @@ function buildBoard(size) {
     }
     //console.log(size);
     addMines(board)
-
-    // board[0][1] = board[3][3] = {
-    //     minesAroundCount: 0,
-    //     isShown: false,
-    //     isMine: true,
-    //     isMarked: false
-    // }
-
-
-    board = setMinesNegsCount(board)
     console.log(board);
-    //console.log('board[2][3]', board[2][3]);
+    board = setMinesNegsCount(board)
     console.table(board);
     return board;
 }
@@ -202,7 +192,7 @@ function cellClicked(i, j, elCell) {
         curCell.isShown = false;
         setTimeout(() => {
             elCell.innerHTML = EMPTY;
-        }, 2000);
+        }, 1000);
 
 
     } else if (curCell.minesAroundCount > 0 && !curCell.isMine) {
