@@ -108,8 +108,6 @@ function addMines(board) {
     while (numsMines) {
         var i = getRandomInt(0, gLevel.size);
         var j = getRandomInt(0, gLevel.size);
-        //console.log('gBoard[i][j]', board[i][j]);
-        // console.log('gBoard[i][j]', gLevel.size);
 
         if (!board[i][j].isMine) {
             board[i][j].isMine = true;
@@ -122,11 +120,10 @@ function addMines(board) {
 
 function renderBoard(board) {
     var strHTML = '';
-    // console.log('board', board);
     for (var i = 0; i < gLevel.size; i++) {
         strHTML += `<tr>\n`;
         for (var j = 0; j < gLevel.size; j++) {
-            //var className = 'clicked'
+
             strHTML += `<td  class= "cell" id= cell-${i}-${j} onclick="cellClicked(${i},${j},this)" 
             oncontextmenu="cellMarked(${i},${j},this);return false;">`
 
@@ -142,15 +139,11 @@ function setMinesNegsCount(board) {
     for (var i = 0; i < gLevel.size; i++) {
         for (var j = 0; j < gLevel.size; j++) {
             var cell = board[i][j];
-            //if (cell.isMine) continue
             var numOfNegs = countAllNeighbors(board, i, j)
-                // console.log('numOfNegs', numOfNegs);
             cell.minesAroundCount = numOfNegs;
-            //console.log(cell);
         }
     }
-    //console.log('board[i][j]', board[2][3]);
-    //console.log(board.length, 'board.length');
+
     return board;
 }
 
@@ -210,7 +203,6 @@ function cellClicked(i, j, elCell) {
 
 }
 
-
 function infoGame() {
     var elLive = document.querySelector('.live')
     elLive.innerText = LIVE + gLevel.life
@@ -225,12 +217,6 @@ function renderCell(location, value) {
     elCell.innerHTML = value;
     elCell.classList.add('clicked')
 }
-
-// function playMsg(isWin) {
-
-//     var elPlay = document.querySelector('.msg');
-//     elPlay.innerHTML += `<h2> ${isWin}? winner: looser</h2>`
-// }
 
 
 function cellMarked(i, j, elCell) {

@@ -42,9 +42,11 @@ h1 {
 }
 
 .start span {
-    font-size: 50px;
+    font-size: 40px;
     /* background-color: #c28dc7; */
     background: linear-gradient(178deg, rgba(254, 195, 242, 0.17690826330532217) 3%, rgba(238, 125, 215, 0.496) 15%, rgb(233, 172, 241) 33%);
+    border-radius: 5px;
+    border: linear-gradient(178deg, rgba(254, 195, 242, 0.17690826330532217) 3%, rgba(238, 125, 215, 0.496) 15%, rgb(233, 172, 241) 33%);
 }
 
 .start {
@@ -53,12 +55,13 @@ h1 {
     margin-bottom: 10px;
     margin-top: 10px;
     background: linear-gradient(178deg, rgba(254, 195, 242, 0.17690826330532217) 3%, rgba(247, 149, 227, 0.4962359943977591) 15%, rgb(236, 152, 247) 33%);
-    /* background-color: #c28dc7; */
+    background-color: #c28dc7;
 }
 
 .start:hover {
-    border: rgb(159, 119, 235) 3px inset;
+    /* border: rgb(159, 119, 235) 3px inset; */
     cursor: pointer;
+    border: none;
 }
 
 table {
@@ -97,12 +100,12 @@ table {
 .timer {
     letter-spacing: 1px;
     border: 3px solid #ceaceb;
-    background-color: #61b6d8;
-    color: #D7CCC8;
+    background-color: #80cdeba1;
+    border-radius: 5px;
+    color: #f1f1f1;
     font-weight: bold;
-    width: 10%;
-    min-width: 50px;
-    padding: 5px;
+    width: 5%;
+    padding: 8px;
     margin: auto;
     margin-left: 15px;
 }
