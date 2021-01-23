@@ -76,8 +76,8 @@ table {
 .cell {
     background-color: rgba(211, 211, 211, 0.699);
     border: 3px outset rgba(247, 172, 243, 0.753);
-    height: 20px;
-    width: 20px;
+    height: 40px;
+    width: 40px;
     text-align: center;
     cursor: pointer;
     table-layout: fixed;
@@ -86,8 +86,8 @@ table {
 .clicked {
     background-color: rgba(211, 211, 211, 0.699);
     border: 3px outset rgba(247, 172, 243, 0.753);
-    height: 20px;
-    width: 20px;
+    height: 40px;
+    width: 40px;
     text-align: center;
     cursor: pointer;
     table-layout: fixed;
@@ -114,6 +114,7 @@ table {
     font-size: 40px;
     margin: auto;
     margin-right: 40px;
+    color: #ceaceb;
 }
 
 .samerow {
