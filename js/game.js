@@ -38,7 +38,7 @@ function initGame() {
         secsPassed: 0,
     }
     setLife(gLevel.size)
-        //gLevel.life = 3;
+
     infoGame()
 
     elLose.innerText = START;
@@ -63,7 +63,7 @@ function buildBoard(size) {
             board[i][j] = piece
         }
     }
-    //console.log(size);
+
     addMines(board)
     console.log(board);
     board = setMinesNegsCount(board)
@@ -155,9 +155,9 @@ function cellClicked(i, j, elCell) {
                 gGame.shownCount--;
                 renderCell(location, MINE)
                 curCell.isShown = false;
-                setTimeout(() => {
-                    elCell.innerHTML = EMPTY;
-                }, 1000);
+                // setTimeout(() => {
+                //     elCell.innerHTML = EMPTY;
+                // }, 1000);
             }
 
 
@@ -265,8 +265,9 @@ function expandShown(board, i, j) {
                 gBoard[i][j].isShown = true;
                 gGame.shownCount++;
             }
+            // if (!neg.minesAroundCount) expandShown(board, i, j)
 
         }
     }
-
+    // return
 }

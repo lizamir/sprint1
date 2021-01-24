@@ -14,7 +14,6 @@ function addMines(board) {
     }
 }
 
-
 function setMinesNegsCount(board) {
 
     for (var i = 0; i < gLevel.size; i++) {
